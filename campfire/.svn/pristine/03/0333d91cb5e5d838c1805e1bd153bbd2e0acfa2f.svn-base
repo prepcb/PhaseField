@@ -1,0 +1,64 @@
+# Identify install rpath
+LIB_RPATH = $(phase_dir)/MG-SRC
+
+#LDFLAGS += -L$(hdf5_dir)/lib -L$(paramesh_dir)/libs -L$(phase_dir)/libs 
+LDLIBS += -lgfortran -lparamesh-pgi -lmpi_paramesh-pgi -lmodules-pgi -lhdf5 -lhdf5_hl 
+
+#FFLAGS+=-g
+
+LDFLAGS += $(ADD_LIB)
+LDFLAGS += $(LDLIBS)
+LDFLAGS += -lparamesh-pgi
+
+# List all application source files
+
+#amr_modules.f90 \
+
+sources := \
+amr_boundary.f90 \
+amr_control.f90 \
+amr_driver.f90 \
+amr_grow_domain.f90 \
+amr_initial_soln.f90 \
+amr_initial_meshing.f90 \
+amr_multigrid.f90 \
+amr_output_stats.f90 \
+amr_test_refinement.f90 \
+ceg_local_timestep.f90 \
+ceg_mesh_partitioning.f90 \
+ceg_shampine_conv.f90
+
+
+csources := profilingLinker.c
+
+#
+default:	amr_modules.lo MG-SRC
+
+
+%.lo:%.f90 amr_modules.f90 Makefile.PGI
+	libtool  --mode=compile --tag=FC $(FC) -c $(FFLAGS) $<
+%.lo:%.c Makefile.PGI
+	libtool  --mode=compile --tag=CC $(CC) -c $(CFLAGS) $<
+
+
+.NOTPARALLEL amr_modules.lo: amr_modules.f90
+	libtool  --mode=compile --tag=FC $(FC) -c $(FFLAGS) $<
+
+objects := amr_modules.lo $(sources:.f90=.lo)
+exobjects := $(csources:.c=.lo)
+
+
+# Identify the main program
+mainobject := $(.f90=.lo)
+exobject := $(.c=.lo)
+
+# compiles the program.
+.PHONY: MG-SRC
+MG-SRC: amr_modules.lo amr_modules.f90 $(mainobject) $(objects) $(exobjects)
+	echo $(FFLAGS)
+	libtool  --mode=link --tag=FC $(FC) $(FFLAGS) -o libMG.la $^ $(LDFLAGS) -rpath $(LIB_RPATH)
+
+.PHONY: clean
+clean: 
+	$(RM) lib* *.o *.lo *.i *.mod *~ *__genmod.f90
+

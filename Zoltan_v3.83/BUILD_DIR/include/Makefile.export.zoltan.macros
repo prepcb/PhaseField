@@ -1,0 +1,13 @@
+ZOLTAN_AR = ar
+ZOLTAN_ALTERNATE_AR = 
+ZOLTAN_CC = /usr/lib64/openmpi/bin/mpicc
+ZOLTAN_CFLAGS = -fPIC -g -O2
+ZOLTAN_CPPFLAGS = -DAUTOTOOLS_BUILD  
+ZOLTAN_CXX = /usr/lib64/openmpi/bin/mpicxx
+ZOLTAN_CXXFLAGS = -DMPICH_IGNORE_CXX_SEEK  -g -O2
+ZOLTAN_DEFS = -DHAVE_CONFIG_H
+ZOLTAN_FC = /usr/lib64/openmpi/bin/mpif90
+ZOLTAN_FCFLAGS = -I ../ -I . -fPIC -g
+ZOLTAN_LDFLAGS = 
+ZOLTAN_RANLIB = ranlib
+ZOLTAN_prefix = /usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR

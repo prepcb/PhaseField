@@ -1,0 +1,33 @@
+#!/bin/bash
+
+test -z "$PROFILEREAD" && . /etc/profile || true
+
+
+echo "--------------------------------------"
+echo "Install script for HDF5 on Hector"
+echo "--------------------------------------"
+if [ -e Makefile ] 
+	then
+	echo "make distclean"
+	make distclean
+	echo "--------------------------------------"
+fi
+echo "module swap xtpe-interlagos xtpe-istanbul"
+echo "    Needed to pass compilation test in ./configure on headnode"
+module swap xtpe-interlagos xtpe-istanbul
+echo "--------------------------------------"
+echo "./configure --enable-parallel --prefix=$HOME/HDF5-HECTOR CC=cc F90=ftn"
+echo "    Creates Makefile for installation into $HOME/HDF5-HECTOR"
+./configure --enable-parallel --prefix=$HOME/HDF5-HECTOR CC=cc F90=ftn
+echo "--------------------------------------"
+echo "module swap xtpe-istanbul xtpe-interlagos"
+echo "    Reset to compiling for execution nodes"
+module swap xtpe-istanbul xtpe-interlagos
+echo "--------------------------------------"
+echo "make -j 16"
+make -j 16
+echo "--------------------------------------"
+echo "make install"
+make install
+echo "All done"
+

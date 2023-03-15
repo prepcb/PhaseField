@@ -1,0 +1,38 @@
+! The 0.34 = W/(R*T_melt*molpervol)=7e7/(8.31*456*54185)
+
+  D=0.
+  D_c=0.
+  D_cc=0.
+  
+  D= 0.5 * D1(1)*( (1.+delta)*vbles(1,ih,jv)+(1.+delta)*vbles(1,2,2))
+  D_c=0.5* D1(1)*( vbles(1,ih,jv)*f_c(vbles(2,ih,jv),0) + vbles(1,2,2)*f_c(c_c,0))
+  D_cc= 0.5* D1(1)*( vbles(1,ih,jv)*f_cc(vbles(2,ih,jv),0) + vbles(1,2,2)*f_cc(c_c,0))
+
+  beta1 = beta*lambda*8d0*(vbles(1,2,2)**2*(1d0-vbles(1,2,2))**2+vbles(1,ih,jv)**2*(1d0-vbles(1,ih,jv))**2)
+  
+  
+
+  
+  
+  c=vbles(2,ih,jv)
+!  T= delta
+  Phi=vbles(1,ih,jv)
+
+  
+
+
+  cross_term = cross_term + beta1*(D_c*FreeEnergy(c,T,Phi,c_dot,phi_dot,2)+D*c+D_cc*T)
+			    
+
+
+!  centre
+  c=vbles(2,2,2)
+  Phi=vbles(1,2,2)
+
+
+  cross_term = cross_term - beta1*(D_c*FreeEnergy(c,T,Phi,c_dot,phi_dot,2)+ D*c+D_cc*T)
+
+
+
+				   
+

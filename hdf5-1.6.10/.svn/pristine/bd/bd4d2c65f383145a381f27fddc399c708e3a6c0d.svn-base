@@ -1,0 +1,53 @@
+SUMMARY OF THE HDF5 CONFIGURATION
+=================================
+
+HDF5 Version:		1.6.10
+Configured on:		Wed Dec 18 13:45:31 GMT 2013
+Configured by:		prepcb@cslin168.csunix.comp.leeds.ac.uk
+Configure mode:		production
+Host system:		x86_64-unknown-linux-gnu
+Byte sex:		little-endian
+Libraries:		static
+Parallel support:	yes
+Installation point:	/usr/not-backed-up/Progs/Paramesh/hdf5-1.6.10
+Compiler:		/usr/bin/mpicc (gcc-4.4.6)
+Compiler switches:	 -ansi -O0 -fomit-frame-pointer -finline-functions -UH5_DEBUG_API -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_POSIX_SOURCE -D_BSD_SOURCE 
+Extra libraries:	 -lz -lm 
+Archiver:		ar
+Ranlib:			ranlib
+Debugged Packages:	
+API Tracing:		no
+
+Configure Summary
+Compiling Options:
+               Compilation Mode:  Production
+                     C Compiler:  mpicc
+                         CFLAGS:   -ansi -O0 -fomit-frame-pointer -finline-functions
+                       CPPFLAGS:  -UH5_DEBUG_API -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_POSIX_SOURCE -D_BSD_SOURCE 
+                        LDFLAGS:  
+                     Debug Mode:  None
+               Shared Libraries:  No
+               Static Libraries:  Yes
+  Statically Linked Executables:  No
+                        Tracing:  No
+   Optimization Instrumentation:  No
+
+Languages:
+----------
+                            C++:  No
+                        Fortran:  No
+
+Features:
+---------
+                        dmalloc:  No
+         Function Stack Tracing:  Disabled
+                           GPFS:  No
+      Strict File Format Checks:  Disabled
+        HDF5 v1.4 Compatibility:  No
+         I/O filters (external):  deflate
+         I/O filters (internal):  shuffle,fletcher32
+ Linux Large File Support (LFS):  Enabled
+                            MPE:  No
+                  Parallel HDF5:  Yes
+                   Threadsafety:  Disabled
+             High Level library:  Enabled

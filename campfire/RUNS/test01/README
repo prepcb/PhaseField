@@ -1,0 +1,46 @@
+ Parameter list: Pb Sn
+ anisotropy       0.02500
+ T             1100.00000K    
+ T_M A         1100.00000K    
+ T_M B         1100.00000K    
+ c ave            0.20000
+ char t           0.00000ns   
+ char L           1.00000nm   
+ char V      ************m/s  
+ char diffuse 0.12000E+02m^2/s
+ D_c liq      0.10000E+01m^2/s
+ D_c sol      0.10000E-03m^2/s
+ D_c/D_phi        0.08333
+ Le= D_T/D_s    100.00000
+ Delta A          1.00000nm   
+ Delta B          1.00000nm   
+ delta/d0         2.00000
+ mu A             0.00600m/K/s
+ mu B             0.00600m/K/s
+ sigma A          1.00000J/m^2
+ sigma B          1.00000J/m^2
+  nucleus rad    20.00000
+ Domain size    512.00000
+ Finest dx        2.00000
+ Defect tol       0.10000  E-7
+ Block size             8
+ total_vars             2
+ Model:1,2              8
+ phi heating  F
+ sol  heating F
+ grad heating F
+ cross term   F
+ thermal run  F
+ 1D           F
+ Hex facet    T
+ FE approx    T
+ kinetic anis F
+ mul-T, div-F T
+ sym:1,-1,0   0
+ max level    6
+ AntiTrapping     0.00000
+ max time    ************
+ smooths      1
+ output rate **
+   max dt         0.50000
+  

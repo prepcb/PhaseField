@@ -1,0 +1,23 @@
+&input_variables 
+max_time = 432d2
+max_time_iter = 300000  ! Setting maximum number of timesteps
+verbose=1            ! One from generic_parameters
+!uniform_mesh=.false.
+output_rate=100
+delta = -0.325
+kE = 0.3
+le=100.0
+nuc_radius = 8.0
+grow=0
+solute=.false.
+paraview_output=.false.
+shampine_tol = 3.0E-11
+shampine_test = 0
+defect_tol_min = 1.0e-9
+multigrid_on = 1
+mg_max_level = 6    ! One to set up the finest grid to be used
+mg_min_lvl = 3
+g_lrefine_min = 1
+g_grid_max = 200.0
+gg_Nbx=1
+/

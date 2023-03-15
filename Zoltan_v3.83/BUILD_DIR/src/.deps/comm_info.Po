@@ -1,0 +1,128 @@
+comm_info.o: ../../src/Utilities/Communication/comm_info.c /usr/include/stdio.h \
+ /usr/include/features.h /usr/include/stdc-predef.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/include/bits/types.h /usr/include/bits/wordsize.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h /usr/include/_G_config.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/include/wchar.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/memory.h /usr/include/string.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/include/xlocale.h /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/openmpi-x86_64/mpi.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/include/openmpi-x86_64/mpi_portable_platform.h \
+ ../../src/Utilities/Communication/comm.h \
+ /usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_types.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+ /usr/include/bits/environments.h /usr/include/bits/wordsize.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h /usr/include/limits.h \
+ /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h \
+ /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stdint.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h /usr/include/stdint.h \
+ /usr/include/bits/wchar.h /usr/include/bits/wordsize.h \
+ /usr/include/bits/wordsize.h ../src/include/Zoltan_config.h \
+ /usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/Utilities/shared/zoltan_util.h \
+ ../src/include/Zoltan_config.h \
+ /usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_comm.h \
+ /usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_mem.h
+
+/usr/include/stdio.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/memory.h:
+
+/usr/include/string.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
+/usr/include/openmpi-x86_64/mpi.h:
+
+/usr/include/openmpi-x86_64/mpi_portable_platform.h:
+
+../../src/Utilities/Communication/comm.h:
+
+/usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_types.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/limits.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stdint.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+../src/include/Zoltan_config.h:
+
+/usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/Utilities/shared/zoltan_util.h:
+
+/usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_comm.h:
+
+/usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_mem.h:

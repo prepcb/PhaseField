@@ -1,0 +1,34 @@
+&input_variables 
+g_lambda = 2.0
+g_beta = 0.0
+g_c0 = 0.6
+g_t0 = 1200.0
+heat_c_term =   .true.
+Grad_DW_term =  .false.
+heat_phi_term = .true.
+cross_term =    .false.
+thermal=.true.
+verbose=1
+g_Le = 100.0
+epsilon=0.1
+nuc_radius=5.0
+g_max_time = 50000.
+smooth_count_max = 1
+solve_count_max = 1
+low_vcycle_count = 3
+high_vcycle_count =6
+max_v_cycle_count = 6
+g_max_dt=0.1
+g_1D=.false.
+g_mu(1)=0.002640
+g_mu(2)=0.003120
+g_sym=0
+defect_tol_min = 1d-9
+g_max_lvl=6
+g_output_rate = 1000
+g_grid=100.0
+g_nbx=4
+g_nby=4
+g_nbz=1
+AlNi=2
+/

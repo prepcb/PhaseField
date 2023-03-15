@@ -1,0 +1,12 @@
+zoltan_align.o: ../../src/Utilities/shared/zoltan_align.c \
+ /home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h \
+ /usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_align.h \
+ ../../src/Utilities/shared/zoltan_util.h ../src/include/Zoltan_config.h
+
+/home/cserv1_b/apps/install/intel-compilers/17.0.1/compilers_and_libraries_2017.1.132/linux/compiler/include/stddef.h:
+
+/usr/not-backed-up/prepcb9Feb2023/FreshCampfire/Zoltan_v3.83/BUILD_DIR/../src/include/zoltan_align.h:
+
+../../src/Utilities/shared/zoltan_util.h:
+
+../src/include/Zoltan_config.h:

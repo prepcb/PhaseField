@@ -1,0 +1,16 @@
+&input_variables 
+max_time_iter = 36000  ! Setting maximum number of timesteps
+mg_max_level = 6       ! One to set up the finest grid to be used
+verbose=1              ! One from generic_parameters
+output_rate=1000
+kE = 0.15
+le=40.0
+grow=0
+shampine_tol = 3.0E-11
+shampine_test = 0
+defect_tol_min = 1.0e-9
+multigrid_on = 1
+C2F_switch = 1           ! Are we using C2F feature? 1=yes, 0=no
+C2F_start_level = 5      ! which refinement level should we start with?
+C2F_desired_level = 6    ! which is the max refinement level?
+/

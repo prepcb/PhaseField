@@ -1,0 +1,50 @@
+#!/bin/bash
+
+#module purge
+#module add intel-compiler/2013-u5 mpi/openmpi-x86_64
+
+
+
+export PARAMESH_DIR=${PWD}/paramesh
+export HDF5_DIR=${PWD}/hdf5-1.6.10
+export ZOLTAN_DIR=${PWD}/Zoltan_v3.83
+export CAMPFIRE_DIR=${PWD}/campfire
+export LD_LIBRARY_PATH=${HDF5_DIR}/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${PARAMESH_DIR}/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${PARAMESH_DIR}/libs/:$LD_LIBRARY_PATH
+
+
+
+cd hdf5-1.6.10
+make distclean
+./configure --enable-parallel --prefix=$HDF5_DIR CFLAGS=-fPIC \
+            CCFLAGS=-fPIC CC=mpicc F90=mpif90 &&
+make &&
+make install
+cd ..
+
+ fix hdf5_dir in Makefile.intel
+cp fixes/Makefile.Intel paramesh
+cd $PARAMESH_DIR
+
+ln -s Makefile.Intel Makefile
+make clean
+make -j 12
+cd ..
+
+# Zoltan
+#module add intel-compiler 
+#module add openmpi-1.10-x86_84 #need to be changed for different machine 
+CC=mpicc 
+CXX=mpicxx 
+FC=mpif90
+cd Zoltan_v3.83
+mkdir BUILD_DIR
+cd BUILD_DIR
+../configure --enable-f90interface --with-mpi-libs="-lirc -limf -lsvml" --with-ccflags=-fPIC --with-cflags=-fPIC --with-fcflags=-fPIC --prefix=$ZOLTAN_DIR/BUILD_DIR
+make everything
+make install
+
+cd ${CAMPFIRE_DIR}
+make
+#cd ..

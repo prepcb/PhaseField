@@ -1,0 +1,52 @@
+LDLIBS += -lhdf5 -lhdf5_hl -lz -lmpi_paramesh -lparamesh -lmodules
+LDFLAGS += -L../MG-SRC/.libs/ -lMG
+
+FFLAGS += -I$(phase_dir)/MG-SRC
+
+LDFLAGS += $(ADD_LIB)
+LDFLAGS += $(LDLIBS)
+LDFLAGS += -lparamesh
+
+# List all application source files
+sources := \
+pf_modules.f90 \
+pf_control.f90 \
+pf_initial_soln.f90 \
+pf_input_file.f90 \
+pf_output.f90 \
+pf_problem.f90 \
+pf_smooth.f90 \
+pf_stencils_2d.f90 \
+pf_stencils_3d.f90 \
+pf_stencils_terms.f90
+
+
+.NOTPARALLEL %.o:%.f90 $(phase_dir)/MG-SRC/amr_modules.f90 pf_modules.f90 Makefile.PGI
+	$(FC) -c -o $*.o $(FFLAGS) $<
+%.o:%.c Makefile.PGI
+	$(CC) -c -o $*.o $(CFLAGS) $<
+objects := $(sources:.f90=.o)
+exobjects := $(csources:.c=.o)
+
+
+# Identify the main program
+mainobject := $(.f90=.o)
+exobject := $(.c=.o)
+
+# Set the executable name
+CMD := ../PF.pgi
+
+
+
+
+# compiles the program.
+$(CMD): $(mainobject) $(objects) $(exobjects)
+	$(FC) $(FFLAGS) -o $@ $^ $(LDFLAGS) -Wl,-rpath,$(phase_dir)/MG-SRC/.libs $(LDFLAGS)
+
+#$(CMD): $(mainobject) $(objects) 
+#	$(FC) $(FFLAGS) -o $@ $^ $(LDFLAGS)
+
+
+.PHONY: clean
+clean: 
+	$(RM) $(CMD) *.o *.i *.mod *~

@@ -1,0 +1,21 @@
+#!/bin/bash --login
+#PBS -N JobName
+#PBS -l mppwidth=64
+#PBS -l mppnppn=32
+#PBS -l walltime=12:00:00
+#PBS -A e231
+#PBS -m be
+#PBS -M myemail@leeds.ac.uk
+
+hostname -f
+date
+
+cd /work/e231/e231/USERNAME/SETNAME/JOBNAME/ 
+
+pwd
+
+echo '##### ##### ##### ##### #####'
+aprun -n 64 -N 32 ./PF.pgi 2
+echo '##### ##### ##### ##### #####'
+
+date
