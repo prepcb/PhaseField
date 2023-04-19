@@ -28,3 +28,5 @@ This will create files: out.txt,tip_loc.txt, paramesh_chk_000001, CHK.out and
 iso_06_XXX000_YYY.vtk
 
 where XXX is in the range 001 to 999 (max for paraview .vtk files), and YYY is from 000 to 009 (for the 10 cores)
+
+The result seen in the .vtk files for the given CASE.inp and amr_runtime_parameters input files is a cubic "hopper" crystal
