@@ -31,4 +31,4 @@ where XXX is in the range 001 to 999 (max for paraview .vtk files), and YYY is f
 
 the "06" in this case relates to the mesh size determined from the parameter g_max_lvl=6 in CASE.inp. g_max_lvl=7 being finer.
 
-The result seen in the .vtk files for the given CASE.inp and amr_runtime_parameters input files is a cubic "hopper" crystal
+The result seen in the .vtk files for the given CASE.inp and amr_runtime_parameters input files is (eventually) a cubic "hopper" crystal
