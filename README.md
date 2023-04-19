@@ -43,7 +43,7 @@ C01]$ mpirun -n 10 ./IM_AlNi3D.intel 2 > out.txt2&
 
 Note the "2" in the command line indicating a restart from the value held in the CHK.out file. 
 
-The reason for this (copying of the restart file paramesh_chk_000001) procedure is to avoid build up of many restart file tyaking up hard disk space.
+The reason for this (copying of the restart file paramesh_chk_000001) procedure is to avoid build up of many restart file taking up hard disk space.
 
 The alternative is to modify (e.g. using emacs) the code in:
 
