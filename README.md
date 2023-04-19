@@ -1,2 +1,4 @@
 # PhaseField
-To access and compile the code run the script 
+To access and compile the code run the script $ . Paramesh.scr
+
+
