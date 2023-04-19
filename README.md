@@ -32,3 +32,17 @@ where XXX is in the range 001 to 999 (max for paraview .vtk files), and YYY is f
 the "06" in this case relates to the mesh size determined from the parameter g_max_lvl=6 in CASE.inp. g_max_lvl=7 being finer.
 
 The result seen in the .vtk files for the given CASE.inp and amr_runtime_parameters input files is (eventually) a cubic "hopper" crystal
+
+The CHK.out file contains a single number, e.g. 97000. This number can be use to restart a run from time step 97000 by first copying:
+
+cp paramesh_chk_000001 paramesh_chk_097000
+
+and then running...
+
+C01]$ mpirun -n 10 ./IM_AlNi3D.intel 2 > out.txt2& 
+
+Note the "2" in the command line indicating a restart from the value held in the CHK.out file. 
+
+The reason for this (copying of the restart file paramesh_chk_000001) procedure is to avoid build up of many restart file tyaking up hard disk space.
+
+
