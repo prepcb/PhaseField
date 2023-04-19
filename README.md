@@ -45,4 +45,8 @@ Note the "2" in the command line indicating a restart from the value held in the
 
 The reason for this (copying of the restart file paramesh_chk_000001) procedure is to avoid build up of many restart file tyaking up hard disk space.
 
+The alternative is to modify (e.g. using emacs) the code in:
 
+campfire]$ emacs IM_AlNi-SRC/mp_output.f90
+
+so that all restart files are retained (every 1000 steps in this case)
