@@ -22,3 +22,4 @@ C01]$ mpirun -n 10 ./IM_AlNi3D.intel
 or
 
 C01]$ mpirun -n 10 ./IM_AlNi3D.intel > out.txt&
+
