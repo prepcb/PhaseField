@@ -50,3 +50,5 @@ The alternative is to modify (e.g. using emacs) the code in:
 campfire]$ emacs IM_AlNi-SRC/mp_output.f90
 
 so that all restart files are retained (every 1000 steps in this case)
+
+Note that the other generated .intel files have not been checked yet for correct operating, and will likely dissappoint.
