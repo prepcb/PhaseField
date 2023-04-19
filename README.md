@@ -15,7 +15,7 @@ and an intel compiler
 
 C01]$ module load intel-compiler
 
-Then to run:
+Then to run a 10 core job:
 
 C01]$ mpirun -n 10 ./IM_AlNi3D.intel 
 
@@ -25,6 +25,6 @@ C01]$ mpirun -n 10 ./IM_AlNi3D.intel > out.txt&
 
 This will create files: out.txt,tip_loc.txt, paramesh_chk_000001, CHK.out and
 
-iso_06_XXX000_0YY.vtk
+iso_06_XXX000_YYY.vtk
 
-where XXX is in the range 001 to 999 (max for paraview .vtk files), and YY is from 00 to 09 (for the 10 cores)
+where XXX is in the range 001 to 999 (max for paraview .vtk files), and YYY is from 000 to 009 (for the 10 cores)
