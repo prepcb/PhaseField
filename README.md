@@ -19,7 +19,12 @@ Then to run:
 
 C01]$ mpirun -n 10 ./IM_AlNi3D.intel 
 
-or
+or to send output to out.txt
 
 C01]$ mpirun -n 10 ./IM_AlNi3D.intel > out.txt&
 
+This will create files: out.txt,tip_loc.txt, paramesh_chk_000001, CHK.out and
+
+iso_06_XXX000_0YY.vtk
+
+where XXX is in the range 001 to 999 (max for paraview .vtk files), and YY is from 00 to 09 (for the 10 cores)
